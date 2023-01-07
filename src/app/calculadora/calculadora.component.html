@@ -1,0 +1,75 @@
+<div class="calc">
+  <H1>CALCULADORA</H1>
+  <!-- PANTALLA -->
+  <div class="pantalla">
+    <div>
+      <p>{{ ultimoOperando }}{{ input }}</p>
+    </div>
+    <div>
+      <p>{{ result }}</p>
+    </div>
+  </div>
+  <!-- TECLADO -->
+  <div class="teclado">
+    <div class="limpiaryborrar">
+      <button class="btn btn-danger limpiar" (click)="limpiar()">CLEAR</button>
+      <button class="btn btn-warning borrar" (click)="borrar()">RET</button>
+    </div>
+    <div class="nums">
+      <!-- PRIMERA FILA -->
+      <button class="btn btn-outline-secondary numero" (click)="add(1)">
+        1
+      </button>
+      <button class="btn btn-outline-secondary numero" (click)="add(2)">
+        2
+      </button>
+      <button class="btn btn-outline-secondary numero" (click)="add(3)">
+        3
+      </button>
+      <button class="btn btn-primary operando" (click)="operacion('+')">
+        +
+      </button>
+      <!-- SEGUNDA FILA -->
+      <button class="btn btn-outline-secondary numero" (click)="add(4)">
+        4
+      </button>
+      <button class="btn btn-outline-secondary numero" (click)="add(5)">
+        5
+      </button>
+      <button class="btn btn-outline-secondary numero" (click)="add(6)">
+        6
+      </button>
+      <button class="btn btn-primary operando" (click)="operacion('-')">
+        -
+      </button>
+      <!-- TERCERA FILA -->
+      <button class="btn btn-outline-secondary numero" (click)="add(7)">
+        7
+      </button>
+      <button class="btn btn-outline-secondary numero" (click)="add(8)">
+        8
+      </button>
+      <button class="btn btn-outline-secondary numero" (click)="add(9)">
+        9
+      </button>
+      <button class="btn btn-primary operando" (click)="operacion('*')">
+        *
+      </button>
+    </div>
+    <div class="ceroycoma">
+      <!-- CUARTA FILA -->
+      <button class="btn btn-outline-secondary numero cero" (click)="add(0)">
+        0
+      </button>
+      <button class="btn btn-outline-secondary numero" (click)="add('.')">
+        .
+      </button>
+      <button class="btn btn-primary operando" (click)="operacion('/')">
+        /
+      </button>
+    </div>
+    <!-- BOTÓN = -->
+    <button class="btn btn-success igual" (click)="calc()">=</button>
+  </div>
+  <!-- FIN TECLADO -->
+</div>
